@@ -33,7 +33,7 @@ number. Y is a special code (it is most likely not a check digit, since it is
 almost always has the value of 0).
 
 The function will return status 200 if syntax is valid and return the parsed
-number. Otherwise it will return 400.
+information hash. Otherwise it will return 400.
 
 Currently the length and AA code is checked against valid province code. There
 is currently no way to check whether a specific NOP PBB actually exists, because
