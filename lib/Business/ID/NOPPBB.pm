@@ -19,7 +19,8 @@ $SPEC{validate_nop_pbb} = {
     description => <<'_',
 
 Indonesian property tax object number, or Nomor Objek Pajak Pajak Bumi dan
-Bangunan, is a number given to a tax object (house, mostly).
+Bangunan, is a number given to a tax object (a piece of land with its
+house/building).
 
 NOP PBB is composed of 18 digits as follow:
 
