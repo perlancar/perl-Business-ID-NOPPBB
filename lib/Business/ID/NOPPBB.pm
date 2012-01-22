@@ -15,6 +15,7 @@ our %SPEC;
 # VERSION
 
 $SPEC{validate_nop_pbb} = {
+    v => 1.1,
     summary => 'Validate (and parse) Indonesian property tax number (NOP PBB)',
     description => <<'_',
 
@@ -41,10 +42,18 @@ you would need to query Dirjen Pajak's database for that.
 
 _
     args => {
-        str => ['str*' => {
+        str => {
             summary => 'The input string containing number to check',
-            arg_pos => 0,
-        }],
+            pos => 0,
+            schema => 'str*',
+        },
+    },
+    return => {
+        schema => ['hash*', {key_in=>['str*'=>{
+            in=>[qw/province locality district village
+                    block object special
+                   /]}]}],
+        },
     },
 };
 
