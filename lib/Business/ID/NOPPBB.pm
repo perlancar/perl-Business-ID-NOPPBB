@@ -120,7 +120,7 @@ sub validate_nop_pbb {
 
 This module provides one function: B<validate_nop_pbb>.
 
-This module's functions have L<Sub::Spec> specs.
+This module has L<Rinci> metadata.
 
 
 =head1 FUNCTIONS
