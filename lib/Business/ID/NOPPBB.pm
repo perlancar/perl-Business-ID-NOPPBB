@@ -48,7 +48,7 @@ _
             schema => 'str*',
         },
     },
-    return => {
+    result => {
         schema => ['hash*', {key_in=>['str*'=>{
             in=>[qw/province locality district village
                     block object special
