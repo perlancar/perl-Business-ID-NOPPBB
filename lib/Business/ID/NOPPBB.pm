@@ -53,10 +53,8 @@ _
             in=>[qw/province locality district village
                     block object special
                    /]}]}],
-        },
     },
 };
-
 sub validate_nop_pbb {
     my (%args) = @_;
 
