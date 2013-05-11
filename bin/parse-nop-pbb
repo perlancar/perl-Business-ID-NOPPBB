@@ -6,6 +6,8 @@ use warnings;
 
 use Perinci::CmdLine;
 
+# VERSION
+
 Perinci::CmdLine->new(url => '/Business/ID/NOPPBB/validate_nop_pbb')->run;
 
 # ABSTRACT: Parse NOP PBB
