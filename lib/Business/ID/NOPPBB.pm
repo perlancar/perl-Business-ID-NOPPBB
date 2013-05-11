@@ -49,7 +49,7 @@ _
         },
     },
     result => {
-        schema => ['hash*', {key_in=>['str*'=>{
+        schema => ['hash*', {each_index=>['str*'=>{
             in=>[qw/province locality district village
                     block object special
                    /]}]}],
