@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+
+use 5.010;
+use strict;
+use warnings;
+
+use Perinci::CmdLine;
+
+Perinci::CmdLine->new(url => '/Business/ID/NOPPBB/validate_nop_pbb')->run;
+
+# ABSTRACT: Parse NOP PBB
+# PODNAME: parse-nop-pbb
+
+=head1 SYNOPSIS
+
+ % parse-nop-pbb 32.73.050.006.008-0123.0
+
+
+=head1 DESCRIPTION
+
+This is a simple command-line interface for <Business::ID::NOPPBB>.
+
+
+=head1 SEE ALSO
