@@ -52,6 +52,9 @@ _
         schema => ['hash*', {each_index=>['str*'=>{
             in=>[qw/province locality district village
                     block object special
+
+                    eng_province_name
+                    ind_province_name
                    /]}]}],
     },
 };
@@ -60,21 +63,23 @@ sub validate_nop_pbb {
 
     my $str = $args{str} or return [400, "Please specify str"];
 
-    # cache provinces
-    state $prov_codes;
-    if (!$prov_codes) {
-        my $res = list_id_provinces(fields=>'bps_code', show_field_names=>0);
+    # cache provinces, key is code
+    state $provs;
+    if (!$provs) {
+        my $res = list_id_provinces(
+            fields=>['bps_code', 'ind_name', 'eng_name'],
+            with_field_names => 1);
         $res->[0] == 200 or die "Can't retrieve list of provinces: ".
             "$res->[0] - $res->[1]";
-        $prov_codes = {};
-        $prov_codes->{$_->[0]}++ for @{$res->[2]};
+        $provs = {};
+        $provs->{$_->{bps_code}} = $_ for @{$res->[2]};
     }
 
     $str =~ s/\D+//g;
     length($str) == 18 or return [400, "Length must be 18 digits"];
     my ($aa, $bb, $ccc, $ddd, $eee, $xxxx, $y) =
         $str =~ /(.{2})(.{2})(.{3})(.{3})(.{4})(.{1})/;
-    $prov_codes->{$aa} or return [400, "Unknown province code"];
+    $provs->{$aa} or return [400, "Unknown province code '$aa'"];
 
     [200, "OK", {
         province => $aa,
@@ -84,6 +89,9 @@ sub validate_nop_pbb {
         block => $eee,
         object => $xxxx,
         special => $y,
+
+        eng_province_name => $provs->{$aa}{eng_name},
+        ind_province_name => $provs->{$aa}{ind_name},
     }];
 }
 
