@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More 0.96;
+use Test::More 0.98;
 
 use Business::ID::NOPPBB qw(validate_nop_pbb);
 

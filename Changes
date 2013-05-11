@@ -1,10 +1,17 @@
 Revision history for Business-ID-NOPPBB
 
-0.02    2012-03-23
+0.03    2013-05-11 (SHARYANTO)
+
+        - Add script: bin/parse-nop-pbb.
+
+        - Add result fields: {eng,ind}_province_name.
+
+
+0.02    2012-03-23 (SHARYANTO)
 
         No functional changes. Remove dependency to old module Sub::Spec.
 
 
-0.01    2011-12-14
+0.01    2011-12-14 (SHARYANTO)
 
         First release.
