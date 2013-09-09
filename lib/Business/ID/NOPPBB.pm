@@ -102,7 +102,7 @@ sub validate_nop_pbb {
 
  use Business::ID::NOPPBB qw(validate_nop_pbb);
 
- my $res = validate_nop_pbb('327311000109900990');
+ my $res = validate_nop_pbb(str => '327311000109900990');
  $res->[0] == 200 or die "Invalid NOP PBB!";
 
  # get structure
