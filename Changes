@@ -1,5 +1,11 @@
 Revision history for Business-ID-NOPPBB
 
+0.04     2013-09-09 (SHARYANTO)
+
+         - No functional changes. Rebuild with MakeMaker instead of
+           Module::Build because the latter is deprecated from core in 5.19.
+
+
 0.03    2013-05-11 (SHARYANTO)
 
         - Add script: bin/parse-nop-pbb.
@@ -9,9 +15,9 @@ Revision history for Business-ID-NOPPBB
 
 0.02    2012-03-23 (SHARYANTO)
 
-        No functional changes. Remove dependency to old module Sub::Spec.
+        - No functional changes. Remove dependency to old module Sub::Spec.
 
 
 0.01    2011-12-14 (SHARYANTO)
 
-        First release.
+        - First release.
