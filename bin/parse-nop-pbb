@@ -4,11 +4,11 @@ use 5.010;
 use strict;
 use warnings;
 
-use Perinci::CmdLine;
+use Perinci::CmdLine::Any;
 
 # VERSION
 
-Perinci::CmdLine->new(url => '/Business/ID/NOPPBB/validate_nop_pbb')->run;
+Perinci::CmdLine::Any->new(url => '/Business/ID/NOPPBB/validate_nop_pbb')->run;
 
 # ABSTRACT: Parse NOP PBB
 # PODNAME: parse-nop-pbb
