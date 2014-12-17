@@ -1,5 +1,8 @@
 package Business::ID::NOPPBB;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use warnings;
 use strict;
@@ -11,8 +14,6 @@ our @ISA    = qw(Exporter);
 our @EXPORT = qw(validate_nop_pbb);
 
 our %SPEC;
-
-# VERSION
 
 $SPEC{validate_nop_pbb} = {
     v => 1.1,
@@ -96,7 +97,7 @@ sub validate_nop_pbb {
 }
 
 1;
-# ABSTRACT: Validate Indonesian property tax object number (NOP PBB)
+# ABSTRACT:
 
 =head1 SYNOPSIS
 
