@@ -130,8 +130,4 @@ This module provides one function: B<validate_nop_pbb>.
 This module has L<Rinci> metadata.
 
 
-=head1 FUNCTIONS
-
-None exported by default but they are exportable.
-
 =cut
