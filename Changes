@@ -1,3 +1,9 @@
+0.090   2019-11-21  Released-By: PERLANCAR; Urgency: medium; Backward-Compatible: no
+
+	- [incompatible change] No longer export validate_nop_pbb() by
+	  default.
+
+
 0.08    2015-09-03  Released-By: PERLANCAR
 
 	- No functional changes.
