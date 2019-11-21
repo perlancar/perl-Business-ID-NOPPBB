@@ -1,6 +1,7 @@
 package Business::ID::NOPPBB;
 
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -9,9 +10,8 @@ use strict;
 
 use Locale::ID::Province qw(list_id_provinces);
 
-require Exporter;
-our @ISA    = qw(Exporter);
-our @EXPORT = qw(validate_nop_pbb);
+use Exporter 'import';
+our @EXPORT_OK = qw(validate_nop_pbb);
 
 our %SPEC;
 
